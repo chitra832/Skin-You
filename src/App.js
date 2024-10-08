@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
-import Router from "./routers/Router.jsx";
 import CssBaseline from "@mui/material/CssBaseline";
-import { ThemeProvider, Button } from "@mui/material";
+import { ThemeProvider, Button, Box } from "@mui/material";
 import { createAppTheme } from "./theme/theme";
+import { Navbar } from "./components/Navbar.jsx";
+import { Footer } from "./components/Footer.jsx";
+import { HomePage } from "./pages/HomePage.jsx";
 
 const App = () => {
   const mode = "light"; // This can be dynamically set, e.g., from a context or state
@@ -11,7 +13,11 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Router />
+        <Box sx={{ position: "relative" }}>
+          <Navbar />
+          <HomePage />
+          {/* <Footer /> */}
+        </Box>
       </ThemeProvider>
     </>
   )

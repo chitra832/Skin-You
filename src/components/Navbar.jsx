@@ -13,15 +13,16 @@ import {
   Typography,
   Collapse,
 } from "@mui/material";
-import logo from "../assets/images/logo.svg";
+import logo from "../assets/images/logo.png";
 import { Menu, Close, ExpandMore } from "@mui/icons-material";
 
 const pages = [
   { label: "Home", route: "/" },
-  { label: "What we do", route: "/what-we-do", hasDropdown: true },
-  { label: "Careers", route: "/careers", hasDropdown: true },
-  { label: "Who are we", route: "/who-we-are", hasDropdown: true },
-  { label: "News", route: "/news", hasDropdown: true },
+  { label: "Treatments", route: "/what-we-do", hasDropdown: false },
+  { label: "Treatment by concern", route: "/careers", hasDropdown: false },
+  { label: "Media", route: "/who-we-are", hasDropdown: false },
+  { label: "About us", route: "/news", hasDropdown: false },
+  { label: "Contact", route: "/news", hasDropdown: false },
 ];
 
 export function Navbar() {
@@ -136,10 +137,14 @@ export function Navbar() {
         padding: { xs: "0 20px 0", md: "20px 120px 20px" },
         zIndex: 1000,
         // height: "70px",
-        background: "#fff",
+        // background: "#fff",
       }}
     >
-      <Grid item xs={12}>
+      <Grid
+        item
+        xs={12}
+        sx={{ background: "#fff", padding: "10px", borderRadius: "20px" }}
+      >
         {/* -------------------------- LARGE SCREEN MENU-------------------------- */}
         <Box
           sx={{
@@ -150,9 +155,9 @@ export function Navbar() {
           }}
         >
           <Box>
-            <img src={logo} height="42px" />
+            <img src={logo} height="60px" />
           </Box>
-          <Box sx={{ display: "flex", gap: "40px" }}>
+          <Box sx={{ display: "flex", gap: "26px" }}>
             {pages.map((page) => (
               <Typography
                 key={page.route}
@@ -161,14 +166,16 @@ export function Navbar() {
                   toggleDropdown(page.route);
                 }}
                 sx={{
-                  // color: isActiveRoute(page.route)
-                  //   ? "#FF3131" // Active color
-                  //   : "rgba(38, 38, 38, 0.6)", // Inactive color
+                  color:
+                    page.route == "Home"
+                      ? "#FE9B8E" // Active color
+                      : "#000", // Inactive color
                   fontSize: "16px",
-                  // fontWeight: isActiveRoute(page.route) ? 700 : 400,
-                  fontFamily: "DM Sans",
+                  fontFamily: "Marcellus",
+                  fontWeight: 500,
                   textDecoration: "none",
                   cursor: "pointer",
+                  textTransform: "uppercase",
                 }}
                 component="a"
               >
@@ -188,32 +195,6 @@ export function Navbar() {
                 )}
               </Typography>
             ))}
-          </Box>
-
-          <Box sx={{ display: "flex", gap: "10px" }}>
-            <Button
-              variant="contained"
-              sx={{
-                padding: "8px 40px",
-                background:
-                  "linear-gradient(180deg, #FF3131 0%, #991D1D 100%);",
-                borderRadius: "6px",
-                color: "#fff",
-                textTransform: "capitalize",
-                boxShadow: "none",
-                fontFamily: "DM Sans",
-                fontWeight: 700,
-                fontSize: "14px",
-                cursor: "auto",
-                "&:hover": {
-                  background:
-                    "linear-gradient(180deg, #FF3131 0%, #991D1D 100%);",
-                  color: "#fff",
-                },
-              }}
-            >
-              Contact Us
-            </Button>
           </Box>
         </Box>
         {/* -------------------------- LARGE SCREEN MENU-------------------------- */}

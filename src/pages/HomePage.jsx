@@ -7,22 +7,13 @@ import {
   Modal,
   Typography,
 } from "@mui/material";
-import {
-  BannerVideo,
-  IndustrySection,
-  PathToBusiness,
-  ServiceSections,
-  WinningTogether,
-} from "../components";
+import { About, BannerVideo } from "../components";
 
 export function HomePage() {
   return (
     <Grid sx={{ padding: 0 }}>
       <BannerVideo />
-      {/* <PathToBusiness />
-      <IndustrySection />
-      <ServiceSections />
-      <WinningTogether /> */}
+      <About />
     </Grid>
   );
 }

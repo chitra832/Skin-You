@@ -37,12 +37,12 @@ export function BannerVideo() {
       <Box
         sx={{
           position: "absolute", // Ensure it's positioned relative to the parent
-          top: "50%", // Moves the top edge to 50% of the container's height
-          left: "50%", // Optional: If you want it horizontally centered, you can use this
+          top: "60%", // Moves the top edge to 50% of the container's height
+          left: "52%", // Optional: If you want it horizontally centered, you can use this
           transform: "translate(-50%, -50%)", // Moves the box by 50% of its height and width to fully center it
           zIndex: 1,
           textAlign: "left",
-          paddingLeft: { xs: "30px", lg: "120px" }, // Maintain padding
+          paddingLeft: { xs: "10px", lg: "120px" }, // Maintain padding
           width: "100%", // Make sure the content takes full width
         }}
       >
@@ -66,7 +66,8 @@ export function BannerVideo() {
             fontSize: "20px",
           }}
         >
-          Instantly Smooth Away Wrinkles and Scars for a Fresh, Youthful Glow
+          Instantly Smooth Away Wrinkles and Scars for a Fresh,
+          <br /> Youthful Glow
         </Typography>
         <Box sx={{ marginTop: "60px" }}>
           <Button
@@ -93,7 +94,8 @@ export function BannerVideo() {
             sx={{
               padding: "20px 45px",
               background: "#fff",
-              marginLeft: "45px",
+              marginLeft: { md: "45px" },
+              marginTop: { xs: "30px", md: 0 },
               fontWeight: 600,
               borderRadius: "10px",
               color: "#000",

@@ -125,13 +125,13 @@ export function About() {
                 padding: "12px 30px",
                 background: "#FE9B8E",
                 borderRadius: "10px",
-                color: "#fff",
+                color: "#000",
                 fontFamily: "Marcellus",
                 textTransform: "uppercase",
-                fontSize: "20px",
+                fontSize: "18px",
                 "&:hover": {
                   background: "#FE9B8E",
-                  color: "#fff",
+                  color: "#000",
                 },
               }}
             >
@@ -145,13 +145,13 @@ export function About() {
                 marginLeft: { md: "14px" },
                 marginTop: { xs: "30px", md: 0 },
                 borderRadius: "10px",
-                color: "#fff",
+                color: "#000",
                 fontFamily: "Marcellus",
-                fontSize: "20px",
+                fontSize: "18px",
                 textTransform: "uppercase",
                 "&:hover": {
                   background: "#FE9B8E",
-                  color: "#fff",
+                  color: "#000",
                 },
               }}
             >
